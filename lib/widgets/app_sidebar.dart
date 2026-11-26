@@ -68,11 +68,15 @@ class _SidebarItem extends StatelessWidget {
             children: [
               Icon(icon, size: 22),
               const SizedBox(width: 14),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+              Expanded(
+                child: Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+                  ),
                 ),
               ),
             ],
